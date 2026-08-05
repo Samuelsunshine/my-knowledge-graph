@@ -1,0 +1,37 @@
+{
+  "nodes": [
+    {
+      "id": "root",
+      "label": "我的知識圖譜",
+      "category": "核心",
+      "notes": "這是整個知識網絡的中心節點。之後學到新東西,就新增一個節點,並用 links 把它連到相關的節點上。",
+      "date": "2026-08-05"
+    },
+    {
+      "id": "mindmap-system",
+      "label": "心智圖系統",
+      "category": "工具",
+      "notes": "用 data/knowledge.json 儲存節點與關聯,用 index.html 畫成互動式網絡圖。每次學到新東西,編輯 JSON 檔案再 commit / push 即可。",
+      "date": "2026-08-05"
+    },
+    {
+      "id": "github-version-control",
+      "label": "GitHub 版本控制",
+      "category": "工具",
+      "notes": "用 GitHub CLI (gh) 登入並建立 repository,把知識圖譜的內容 push 上去,之後每次更新都可以透過 git 紀錄追蹤歷史。",
+      "date": "2026-08-05"
+    },
+    {
+      "id": "force-graph",
+      "label": "力導向圖 (Force-Directed Graph)",
+      "category": "概念",
+      "notes": "一種用物理模擬(節點互相排斥、連線像彈簧)自動排版網絡圖的方式,用 D3.js 的 forceSimulation 實作。",
+      "date": "2026-08-05"
+    }
+  ],
+  "links": [
+    { "source": "root", "target": "mindmap-system" },
+    { "source": "root", "target": "github-version-control" },
+    { "source": "mindmap-system", "target": "force-graph" }
+  ]
+}
